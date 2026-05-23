@@ -205,7 +205,22 @@ footer { background: var(--navy); padding: 32px 24px; }
         <div class="time-row"><span id="cur-relaxintro">0:00</span><span id="tot-relaxintro">--:--</span></div>
       </div>
     </div>
-    <div class="prod-item"><div class="prod-dot"></div>Respiração e Soltura das Tensões</div>
+    
+    <div class="prod-item">
+      <div class="prod-dot"></div>
+      Respiração e Soltura das Tensões <span class="badge-free">Gratuito</span>
+    </div>
+    <div class="player" id="player-relax1" style="margin: 4px 0 10px;">
+      <button class="play-btn" onclick="togglePlay('relax1')">
+        <svg width="14" height="14" viewBox="0 0 16 16"><polygon id="icon-relax1" points="4,2 14,8 4,14" fill="white"/></svg>
+      </button>
+      <div class="progress-wrap">
+        <div class="progress-bar" onclick="seekAudio('relax1', event)">
+          <div class="progress-fill" id="fill-relax1"></div>
+        </div>
+        <div class="time-row"><span id="cur-relax1">0:00</span><span id="tot-relax1">--:--</span></div>
+      </div>
+    </div>
     <div class="prod-item"><div class="prod-dot"></div>Relaxamento Profundo dos Ombros, Rosto e Mandíbula</div>
     <div class="prod-item"><div class="prod-dot"></div>Desacelerando Corpo e Mente</div>
     <div class="prod-item"><div class="prod-dot"></div>Yoga Nidra – O Estado Entre Relaxamento e Consciência</div>
@@ -267,7 +282,8 @@ footer { background: var(--navy); padding: 32px 24px; }
 <audio id="audio-deg"        preload="metadata" src="degustacao.mp3"></audio>
 <audio id="audio-introresp"  preload="metadata" src="introresp.mp3"></audio>
 <audio id="audio-resp1"      preload="metadata" src="resp1.mp3"></audio>
-<audio id="audio-relaxintro" preload="metadata" src="relaxintro.mp3"></audio>
+<audio id="audio-relaxintro" preload="metadata" src="relaxintro.mp3">
+<audio id="audio-relax1" preload="metadata" src="relax1.mp3"></audio>
 
 <script>
 const players = {
